@@ -45,3 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     mobileNavbar.init();
 });
+module.exports = {
+    darkMode: 'media', // ou 'class' se quiser controlar com classes manualmente
+    // restante da config...
+  }
+  

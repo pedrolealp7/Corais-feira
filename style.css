@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #222;
+    line-height: 1.6;
+  }
 
 a {
     color: rgb(255, 255, 255);
@@ -27,14 +33,28 @@ nav {
     padding: 10px 20px; /* Adiciona padding para melhorar a área clicável */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: rgb(63, 160, 216);
-    height: 8vh;
+    height: 5vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 76, 153, 0.9);
 }
 
 nav h1 {
-    color: rgb(0, 38, 255);
+    color: rgb(255, 255, 255);
     font-size: 30px;
     margin-right: auto; /* Move o título à esquerda */
 }
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+
+  
 
 .nav-list {
     list-style: none;
@@ -56,8 +76,8 @@ nav h1 {
 }
 
 .nav-list li a:hover {
-    color: rgb(63, 160, 216); /* Muda a cor do texto ao passar o mouse */
-    background-color: white; /* Coloca o fundo branco no hover */
+    color: rgb(63, 160, 216); 
+    background-color: white; 
     border-radius: 4px; /* Bordas arredondadas nos links */
 }
 
@@ -144,7 +164,10 @@ nav h1 {
 
 main h1 {
     color: #000000;
-    background-color: aliceblue;
+    background: linear-gradient(45deg, #ffffff, #ffffff, #8beef5);
+    border-radius: 4px;
+   
+    
 }
 
 p {
@@ -160,7 +183,7 @@ main {
     flex-direction: column;
     justify-content: flex-start; 
     align-items: center; 
-    padding-top: 20px;
+    padding-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center; 
@@ -221,14 +244,18 @@ main {
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
         }
         .info1 h2{
-            
+            background: linear-gradient(45deg, #ffffff, #ffffff, #8beef5);
+            border-radius: 4px;
         }
         .info2 h2{
-           
+            background: linear-gradient(45deg, #ffffff, #ffffff, #8beef5);
+            border-radius: 4px;
+
 
         }
         .info3 h2{
             background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00);
+            border-radius: 4px;
 
         }
         .info1, .info2, .info3 {
@@ -243,12 +270,15 @@ main {
         .foto1, .foto2, .foto3 {
             width: 300px;
             height: 300px;
-            border: 3px solid #0077b6;
+            border: 12px solid #0077b6;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            margin-top: 10px; /* Espaçamento entre o texto e a imagem */
+            margin-top:0 auto  20px; /* Espaçamento entre o texto e a imagem */
         }
+
+
+        
