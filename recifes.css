@@ -1,6 +1,6 @@
 * {
     margin: 0%;
-    padding: 0%;
+    padding: 0;
     box-sizing: 0px;
 }
 body {
@@ -12,13 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
   }
- 
 
 a {
     color: rgb(255, 255, 255);
@@ -69,14 +63,13 @@ nav a {
 .nav-list {
     list-style: none;
     display: flex;
-    justify-content:space-around ; /* Garante que a lista de navegação esteja à direita */
+    justify-content: flex-end; /* Garante que a lista de navegação esteja à direita */
     align-items: center; /* Alinha os itens verticalmente */
-    
 }
 
 .nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
+   letter-spacing: 3px;
+   margin-left: 32px;
 }
 
 .nav-list li a {
@@ -115,7 +108,7 @@ nav a {
         position: absolute;
         top: 8vh;
         right: 0;
-        width: 100%;
+        width: 50vw;
         height: 92vh;
         background: rgb(16, 103, 218);
         flex-direction: column;
@@ -173,22 +166,8 @@ nav a {
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
 }
-
-main h1 {
-    color: #000000;
-    background: linear-gradient(45deg, #8beef59d, #ffffff, #8beef5);
-    border-radius: 4px;
-   
-    
-}
-
-p {
-    color: #000000;
-}
-
-
 main {
-    flex: 1;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,106 +176,6 @@ main {
     background: url("Etiqueta Escolar infantil Fundo do Mar Azul.jpg") no-repeat center center;
     background-size: cover;
     text-align: center;
-    width: 99%;
+    width: 98%;
+    height: 700px;
 }
-
-
-.info-topo, .info-inferior {
-    width: 80%; 
-    margin-bottom: 20px; 
-}
-
-.info-topo h2, .info-inferior h2 {
-    margin-bottom: 10px;
-}
-
-.info-topo p, .info-inferior p {
-    font-size: 18px;
-    color: #000; 
-}
-
-.foto1 img, .foto2 img, .foto3 img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            
-}
-
-    
-        .info1 h2{
-            background: linear-gradient(45deg, #8beef5, #ffffff, #8beef5);
-            border-radius: 4px;
-        }
-        .info2 h2{
-            background: linear-gradient(45deg, #8beef5, #ffffff, #8beef5);
-            border-radius: 4px;
-
-
-        }
-        .info3 h2{
-            background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00);
-            border-radius: 4px;
-
-        }
-        .info1, .info2, .info3 {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-            margin: 20px auto;
-            width: 90%;
-            max-width: 700px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease;
-        }
-        
-        
-        .foto1, .foto2, .foto3 {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border: 8px solid #0077b6;
-            border-radius: 12px;
-            margin: 20px auto;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-        }
-        
-            footer {
-                width: 100%;
-                 background: linear-gradient(45deg, #0099ff, #ffffff, #00c8ff);
-                bottom: 0;
-                left: 0;
-                background-color: #222; /* só pra você ver ele certinho */
-                color: white;
-                text-align: center;
-                padding: 30px 10px;
-                font-size: 16px;
-                height: 200px;
-                
-            }
-            
-
-           
-        footer h2{
-         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-           color: #0077b6;
-           font-size: 22px;
-           margin-bottom: 10px;
-          
-        }
-        .info1 h2, .info2 h2, .info3 h2 {
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .info1:hover, .info2:hover, .info3:hover {
-            transform: scale(1.02);
-        }
-        
-        
-
-        

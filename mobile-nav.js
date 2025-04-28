@@ -1,8 +1,9 @@
+// mobile-navbar.js
 class MobileNavbar {
-    constructor(mobileMenu, navList, navLinks) { 
+    constructor(mobileMenu, navList, navLinks) {
         this.mobileMenu = document.querySelector(mobileMenu);
         this.navList = document.querySelector(navList);
-        this.navLinks = document.querySelectorAll(navLinks);     
+        this.navLinks = document.querySelectorAll(navLinks);
         this.activeClass = "active";
         this.handleClick = this.handleClick.bind(this);
     }
@@ -11,7 +12,7 @@ class MobileNavbar {
         this.navLinks.forEach((link, index) => {
             link.style.animation = link.style.animation
                 ? ""
-                : `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                : `navLinkFade 0.6s ease forwards ${index / 8 + 0.3}s`;
         });
     }
 
@@ -35,7 +36,6 @@ class MobileNavbar {
     }
 }
 
-// Espera o DOM carregar para evitar erros
 document.addEventListener("DOMContentLoaded", () => {
     const mobileNavbar = new MobileNavbar(
         ".mobile-menu",
@@ -44,8 +44,3 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     mobileNavbar.init();
 });
-module.exports = {
-    darkMode: 'media', // ou 'class' se quiser controlar com classes manualmente
-    // restante da config...
-  }
-  
