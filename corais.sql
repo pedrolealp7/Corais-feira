@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07/05/2025 às 14:53
+-- Tempo de geração: 07/05/2025 às 20:03
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.0.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `corais`
+-- Banco de dados: `_especies`
 --
 
 -- --------------------------------------------------------
@@ -28,29 +28,24 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `corais` (
-  `CoralID` int(11) NOT NULL,
-  `Nome` varchar(45) NOT NULL,
-  `Nome_Cientifico` varchar(45) NOT NULL,
-  `Recifes_RecifeID` int(11) NOT NULL,
-  `Tipo` varchar(45) NOT NULL,
-  `Descriçao` varchar(45) NOT NULL
+  `CoraisID` int(11) NOT NULL,
+  `nome` varchar(45) NOT NULL,
+  `nome_cientifico` varchar(45) NOT NULL,
+  `tipo_coral` varchar(45) NOT NULL,
+  `Descricao` varchar(45) NOT NULL,
+  `Recifes_RecifeID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Estrutura para tabela `recifes`
+-- Despejando dados para a tabela `corais`
 --
 
-CREATE TABLE `recifes` (
-  `RecifeID` int(11) NOT NULL,
-  `Nome` varchar(45) NOT NULL,
-  `Tipo_recife` varchar(45) NOT NULL,
-  `ameaças` varchar(45) NOT NULL,
-  `Localizaçao` varchar(45) NOT NULL,
-  `Especies_EspeciesID` int(11) NOT NULL,
-  `Descriçao` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+INSERT INTO `corais` (`CoraisID`, `nome`, `nome_cientifico`, `tipo_coral`, `Descricao`, `Recifes_RecifeID`) VALUES
+(1, 'Coral-cérebro', 'Diploria labyrinthiformis', 'Coral Duro', 'Conhecido como coral-cérebro-labiríntico, tem', 1),
+(4, 'Coral-couve-flor', 'Pocillopora damicornis', 'Coral Duro', 'Chamado de coral-couve-flor, tem ramos curtos', 2),
+(8, 'Coral-fungo', 'Fungia scutaria', 'Coral Duro', 'Conhecido como coral-fungo, é um coral solitá', 4),
+(10, 'Coral-arame', 'Seriatopora hystrix', 'Coral Duro', 'Também chamado de coral-arame, tem ramos fino', 3),
+(12, 'Coral-âncora', 'Euphyllia ancora', 'Coral Duro', 'Conhecido como coral-âncora, tem tentáculos q', 5);
 
 --
 -- Índices para tabelas despejadas
@@ -60,24 +55,18 @@ CREATE TABLE `recifes` (
 -- Índices de tabela `corais`
 --
 ALTER TABLE `corais`
-  ADD PRIMARY KEY (`CoralID`),
+  ADD PRIMARY KEY (`CoraisID`,`Recifes_RecifeID`),
   ADD KEY `fk_Corais_Recifes_idx` (`Recifes_RecifeID`);
-
---
--- Índices de tabela `recifes`
---
-ALTER TABLE `recifes`
-  ADD PRIMARY KEY (`RecifeID`,`Especies_EspeciesID`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT de tabela `recifes`
+-- AUTO_INCREMENT de tabela `corais`
 --
-ALTER TABLE `recifes`
-  MODIFY `RecifeID` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `corais`
+  MODIFY `CoraisID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restrições para tabelas despejadas
