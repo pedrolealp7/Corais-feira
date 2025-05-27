@@ -12,5 +12,5 @@ if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
 
-echo "Conexão bem-sucedida!";
+$atualizador = date("YmdHis").rand(0,999999999999999);
 ?>
