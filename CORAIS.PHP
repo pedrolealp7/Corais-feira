@@ -12,7 +12,9 @@ include_once './includes/header.php';
         
       </div>
     </div>
-
+   <?php  $sql = "SELECT Nome, Tipo, Descricao FROM corais";
+$result = $conn->query($sql);
+?>
     <div class="info1">
         <h2>Coral-couve-flor</h2>
         <p>O maior recife de coral vivo do mundo é a Grande Barreira de Corais na Austrália, que pode ser vista do espaço. </p>
