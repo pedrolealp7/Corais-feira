@@ -1,6 +1,7 @@
 <?php
-include_once './includes/conexao.php';
-include_once './includes/header.php';
+include_once(__DIR__ . '/includes/conexao.php');
+include_once(__DIR__ . '/includes/header.php');
+
 ?>
 <main>
 <?php  
