@@ -10,7 +10,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($recife = $result->fetch_assoc()) {
-        // Criar nome de arquivo da imagem com base no nome do recife
+        
         $nomeImagem = strtolower(str_replace([' ', 'ç', 'ã', 'é', 'ó'], ['-', 'c', 'a', 'e', 'o'], $recife['Nome'])) . ".jpg";
 
         echo '

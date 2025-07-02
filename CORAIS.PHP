@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
              <p>' . htmlspecialchars($coral['Tipo']) . '</p>
             
             <div class="foto1">
-                <img src="./assets/img/cerebro.jpg' . $nomeArquivoImagem . '" alt="Imagem de ' . htmlspecialchars($coral['Nome']) . '">
+                <img src="./assets/img/coral-do-arco.jpg' . $nomeArquivoImagem . '" alt="Imagem de ' . htmlspecialchars($coral['Nome']) . '">
                 <a href="corais.html"></a>
             </div>
         </div>';
