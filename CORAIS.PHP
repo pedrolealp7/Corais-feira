@@ -1,6 +1,7 @@
 <?php
-include_once './includes/conexao.php';
-include_once './includes/header.php';
+include_once(__DIR__ . '/includes/conexao.php');
+include_once(__DIR__ . '/includes/header.php');
+
 ?>
 <main>
 <?php  
@@ -21,8 +22,9 @@ if ($result->num_rows > 0) {
              <p>' . htmlspecialchars($coral['Tipo']) . '</p>
             
             <div class="foto1">
+
                 <img src="./assets/img/cerebro.jpg' . $cerebro.jpg . '" alt="Imagem de ' . htmlspecialchars($coral['Nome']) . '">
-                <a href="corais.html"></a>
+             
             </div>
         </div>';
     }
