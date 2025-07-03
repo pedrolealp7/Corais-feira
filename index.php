@@ -2,10 +2,11 @@
 <?php
 include_once './includes/conexao.php';
 include_once './includes/header.php';
+
 ?>
 </header>
   <main>
-    
+ 
     <div class="info-topo">
       <h1>Sobre os corais</h1>
       <p>Os corais marinhos são organismos marinhos que formam grandes recifes, servindo como habitats essenciais para diversas espécies. Eles são animais filtradores, pertencentes ao filo cnidário, e se agrupam em colônias que constroem estruturas rígidas a partir do cálcio presente na água do mar. Além de sua importância ecológica, fornecem proteção contra a erosão costeira e contribuem para a biodiversidade marinha. No entanto, os corais estão ameaçados por mudanças climáticas, poluição e práticas de pesca destrutivas, o que tem levado a um declínio significativo nas áreas de recifes ao redor do mundo.</p>
