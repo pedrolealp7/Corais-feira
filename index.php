@@ -22,7 +22,7 @@ include_once './includes/header.php';
         <h2>Corais</h2>
         <p>O maior recife de coral vivo do mundo é a Grande Barreira de Corais na Austrália, que pode ser vista do espaço. </p>
         <div class="foto1">
-          <a href="corais.php"><img src="./assets/img/cerebro.jpg" alt="Imagem de um coral bonito"> </a>
+          <a href="corais.php"><img src="./assets/img/coral-cerebro.jpg" alt="Imagem de um coral bonito"> </a>
         </div>
       </div>
       

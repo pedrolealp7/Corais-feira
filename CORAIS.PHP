@@ -23,7 +23,8 @@ if ($result->num_rows > 0) {
             
             <div class="foto1">
 
-                <img src="./assets/img/cerebro.jpg' . $cerebro.jpg . '" alt="Imagem de ' . htmlspecialchars($coral['Nome']) . '">
+                <img src="./assets/img/' . $nomeArquivoImagem . '" alt="Imagem de ' . htmlspecialchars($coral['Nome']) . '">
+
              
             </div>
         </div>';
