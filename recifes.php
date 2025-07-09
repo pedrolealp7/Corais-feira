@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
             <p>' . htmlspecialchars($recife['Descricao']) . '.</p>
             <p>' . htmlspecialchars($recife['Localizacao']) . '</p>
             <div class="foto1">
-                <img src="./assets/img/recifes/' . $nomeImagem . '" alt="Imagem de ' . htmlspecialchars($recife['Nome']) . '">
+                <img src="./assets/img/' . $nomeImagem . '" alt="Imagem de ' . htmlspecialchars($recife['Nome']) . '">
             </div>
         </div>';
     }

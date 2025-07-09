@@ -69,8 +69,7 @@ INSERT INTO `recifes` (`RecifeID`, `Nome`, `Descricao`, `Localizacao`, `Ameacas`
 (1, 'Recife de franja', 'Forma-se junto à costa', 'Caribe, Mar Vermelho, Pacífico Sul', 'Poluição, urbanização, turismo, pesca, clima'),
 (2, 'Recife de barreira', 'Separado da costa por lagoa', 'Austrália, Belize, Nova Caledônia', 'Aquecimento, acidificação, ciclones, turismo, petróleo'),
 (3, 'Atol', 'Recife circular em volta da lagoa', 'Maldivas, Ilhas Marshall, Kiribati, Polinésia Francesa', 'Elevação do mar, erosão, branqueamento'),
-(4, 'Recife de plataforma', 'Forma-se em áreas rasas afastadas da costa', 'Golfo do México, Mar do Sul da China, Mar de Arafura', 'Petróleo, pesca industrial, poluição, acidificação'),
-(5, 'Recifes bancais', 'Formações planas no fundo do mar', 'Mar do Caribe, Bahamas, Plataforma Brasileira', 'Pesca de arrasto, mineração, pouca luz, alterações oceânicas');
+
 
 --
 -- Índices para tabelas despejadas
