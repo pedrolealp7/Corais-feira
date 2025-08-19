@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19/05/2025 às 16:52
+-- Tempo de geração: 19/08/2025 às 14:45
 -- Versão do servidor: 10.4.32-MariaDB
--- Versão do PHP: 8.0.30
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,20 +32,19 @@ CREATE TABLE `corais` (
   `Nome` varchar(45) NOT NULL,
   `NomeCientifico` varchar(100) NOT NULL,
   `Descricao` varchar(255) NOT NULL,
-  `Tipo` varchar(45) NOT NULL,
-  `Recifes_RecifeID` int(11) NOT NULL
+  `Tipo` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Despejando dados para a tabela `corais`
 --
 
-INSERT INTO `corais` (`CoraisID`, `Nome`, `NomeCientifico`, `Descricao`, `Tipo`, `Recifes_RecifeID`) VALUES
-(1, 'Coral-cerebro', 'Diploria labyrinthiformis', 'Sulcos profundos como labirinto', 'Coral duro', 1),
-(2, 'Coral-couve-flor', 'Pocillopora damicornis', 'Ramos curtos e grossos, comum no Indo-Pacífico', 'Coral duro', 2),
-(3, 'Coral-fungo', 'Fungia scutaria', 'Coral solitário, achatado, formato de disco', 'Coral duro', 3),
-(4, 'Coral-arame', 'Seriatopora hystrix', 'Ramos finos e pontiagudos, delicado', 'Coral duro', 4),
-(5, 'Coral-ancora', 'Euphyllia ancora', 'Tentáculos em forma de âncora, muito usado em aquários', 'Coral duro', 1);
+INSERT INTO `corais` (`CoraisID`, `Nome`, `NomeCientifico`, `Descricao`, `Tipo`) VALUES
+(1, 'Coral-cerebro', 'Diploria labyrinthiformis', 'Sulcos profundos como labirinto', 'Coral duro'),
+(2, 'Coral-couve-flor', 'Pocillopora damicornis', 'Ramos curtos e grossos, comum no Indo-Pacífico', 'Coral duro'),
+(3, 'Coral-fungo', 'Fungia scutaria', 'Coral solitário, achatado, formato de disco', 'Coral duro'),
+(4, 'Coral-arame', 'Seriatopora hystrix', 'Ramos finos e pontiagudos, delicado', 'Coral duro'),
+(5, 'Coral-ancora', 'Euphyllia ancora', 'Tentáculos em forma de âncora, muito usado em aquários', 'Coral duro');
 
 -- --------------------------------------------------------
 
@@ -68,8 +67,7 @@ CREATE TABLE `recifes` (
 INSERT INTO `recifes` (`RecifeID`, `Nome`, `Descricao`, `Localizacao`, `Ameacas`) VALUES
 (1, 'Recife de franja', 'Forma-se junto à costa', 'Caribe, Mar Vermelho, Pacífico Sul', 'Poluição, urbanização, turismo, pesca, clima'),
 (2, 'Recife de barreira', 'Separado da costa por lagoa', 'Austrália, Belize, Nova Caledônia', 'Aquecimento, acidificação, ciclones, turismo, petróleo'),
-(3, 'Atol', 'Recife circular em volta da lagoa', 'Maldivas, Ilhas Marshall, Kiribati, Polinésia Francesa', 'Elevação do mar, erosão, branqueamento'),
-
+(3, 'Atol', 'Recife circular em volta da lagoa', 'Maldivas, Ilhas Marshall, Kiribati, Polinésia Francesa', 'Elevação do mar, erosão, branqueamento');
 
 --
 -- Índices para tabelas despejadas
@@ -79,8 +77,7 @@ INSERT INTO `recifes` (`RecifeID`, `Nome`, `Descricao`, `Localizacao`, `Ameacas`
 -- Índices de tabela `corais`
 --
 ALTER TABLE `corais`
-  ADD PRIMARY KEY (`CoraisID`),
-  ADD KEY `fk_Corais_Recifes_idx` (`Recifes_RecifeID`);
+  ADD PRIMARY KEY (`CoraisID`);
 
 --
 -- Índices de tabela `recifes`
@@ -103,16 +100,6 @@ ALTER TABLE `corais`
 --
 ALTER TABLE `recifes`
   MODIFY `RecifeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- Restrições para tabelas despejadas
---
-
---
--- Restrições para tabelas `corais`
---
-ALTER TABLE `corais`
-  ADD CONSTRAINT `fk_Corais_Recifes` FOREIGN KEY (`Recifes_RecifeID`) REFERENCES `recifes` (`RecifeID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
